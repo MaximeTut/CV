@@ -86,9 +86,9 @@ def Competences():
 
                 competences = ["Python", "Python", "IA", "IA", "IA",
                             "IA", "IA" ,"IA","Python", "Python", "Business Intelligence",
-                            "Business Intelligence","Big Data", "Mise en production", "Mise en production", "Mise en production",
-                            "Mise en production", "Mise en production",
-                            "Mise en production", "Big Data", "Big Data"]
+                            "Business Intelligence","Big Data", "ML Ops", "ML Ops", "ML Ops",
+                            "ML Ops", "ML Ops",
+                            "ML Ops", "Big Data", "Big Data"]
 
 
                 librairies = ["Data analyse", "Data analyse", "TensorFlow/Keras", "TensorFlow/Keras", "TensorFlow/Keras",
