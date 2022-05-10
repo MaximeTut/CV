@@ -241,6 +241,23 @@ def Competences():
         st.markdown("**Dataiku :** Core Designer | ML Practitioner | Advanced Designer | Developer | ML Ops")
         st.markdown("**Azure :** AZ-900: Microsoft Azure Fundamentals | DP-100: Designing and Implementing a Data Science Solution on Azure\
          | AI-900: Microsoft Azure AI Fundamentals")
+    
+    with st.expander("Centres d'intérêts"):
+        col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([2,3,1,4,1,4,1,3])
+        col1.image("compostelle.png", width = 100)
+        col2.markdown("**Randonnée :** \n Randonnée de\
+            Saint-Jacques de Compostelle. 865 km de Saint-Jean-Pied-de-Port\
+            jusque Finistera.")
+        with col4 :
+            st.markdown("**Actualité IA et scientifique** \n Abonné à :" )
+            st.image("magasine.png", width=200)
+        with col6:
+            st.markdown("**Jeux de société** \n Mon jeu préféré :")
+            st.image("catan.png", width=115)
+        with col8:
+            st.markdown("🎸 **Guitare** \n Je joue essentiellement avec une folk. Je compose et enregistre de temps en temps\
+                de façon très modeste :)")
+        
 
 
 
