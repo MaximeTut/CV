@@ -41,7 +41,7 @@ vos données !")
         
 
         col3.markdown("##### 2018-2020")
-        col3.markdown("###### Consultant Qualité\n_Taghleef_")
+        col3.markdown("###### Consultant Qualité au Canada\n_Taghleef Canada_")
         col3.write("Analyse statistique | Gestion de projet")
 
         col4.markdown("##### 2020-2021")
@@ -262,4 +262,27 @@ def Competences():
 
 
 def portfolio():
-    pass
+    col1, col2, col3 = st.columns(3)
+    st.markdown(
+        """
+    <style>
+    .streamlit-expanderHeader {
+        font-size: 20px;
+        background-color: rgb(255, 255, 245);
+    }
+    .streamlit-expander {background-color: rgb(255, 255, 245)}
+    </style>
+    """,
+        unsafe_allow_html=True,
+    )
+
+    with col1.expander("NLP", expanded= True ):
+        st.image("img_nlp.png", width=50)
+        st.markdown("##### Topic Modeling & Analyse de sentiment")
+        st.write(" Analyse de sentiment et Topic modeling d'une application Smart City utilisée par les\
+            habitants pour détecter des causes de mécontentements.")
+        st.markdown("**#Transformers #Python**")
+    with col2.expander("Computer vision"):
+        st.write("coucou")
+    with col3.expander("Analyses Statistiques"):
+        st.write("coucou")
