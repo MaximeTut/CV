@@ -252,7 +252,7 @@ def Competences():
             st.markdown("**Actualité IA et scientifique** \n Abonné à :" )
             st.image("magasine.png", width=200)
         with col6:
-            st.markdown("**Jeux de société** \n Mon jeu préféré :")
+            st.markdown("**Jeux de société** :")
             st.image("catan.png", width=115)
         with col8:
             st.markdown("🎸 **Guitare** \n Je joue essentiellement avec une folk. Je compose et enregistre de temps en temps\
@@ -268,21 +268,76 @@ def portfolio():
     <style>
     .streamlit-expanderHeader {
         font-size: 20px;
-        background-color: rgb(255, 255, 245);
+        font-weight : bold;
+        background-color: rgb(255, 255, 255);
     }
-    .streamlit-expander {background-color: rgb(255, 255, 245)}
+    .streamlit-expander {background-color: rgb(255, 255, 255)}
     </style>
     """,
         unsafe_allow_html=True,
     )
 
     with col1.expander("NLP", expanded= True ):
-        st.image("img_nlp.png", width=50)
-        st.markdown("##### Topic Modeling & Analyse de sentiment")
+        st.image("img_nlp.png", width=100)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Topic Modeling & Analyse de sentiment</p>'
+    
+        st.markdown(style, unsafe_allow_html=True)
         st.write(" Analyse de sentiment et Topic modeling d'une application Smart City utilisée par les\
             habitants pour détecter des causes de mécontentements.")
         st.markdown("**#Transformers #Python**")
-    with col2.expander("Computer vision"):
-        st.write("coucou")
-    with col3.expander("Analyses Statistiques"):
-        st.write("coucou")
+
+
+    with col2.expander("Dashboarding", expanded = True ):
+        st.image("poleemploi.png", width=180)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Analyse des données de Pôle Emploi</p>'
+        st.markdown(style, unsafe_allow_html=True)
+        st.write("Analyser facilement les pénuries de talents selon les régions.")
+        st.markdown("######")
+        st.markdown("**#Seaborn #Plotly**")
+        st.write("[**Lien de la webapp**](https://share.streamlit.io/maximetut/emploi2021/main/emploi2021.py)")
+
+
+    with col3.expander("Statistique et prédiction", expanded= True):
+        st.image("turnover.png", width=220)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Analyse Turn-Over</p>'
+        st.markdown(style, unsafe_allow_html=True)
+        st.write("Analyse statistique des causes du turn-over, proposition d'un plan de rétention des talents\
+            et prédiction des fuites des salariés")
+        st.markdown("**#shap #statistique #scikit-learn**")
+        st.write("[**Lien du Notebook**](https://github.com/MaximeTut/Analyse_Turn_Over/blob/main/Analyse_Turn_Over.ipynb)")
+    
+    col1, col2, col3 = st.columns(3)
+    with col1.expander("Data visualisation", expanded= True ):
+        st.image("accident.png", width=240)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Réduction des accidents de la route</p>'
+        st.markdown(style, unsafe_allow_html=True)
+        st.write("Analyse des taux d'accidents du Royaume-Unis, identification des causes et recommandations pour les réduire.")
+        st.markdown("**#Seaborn #Matplotlib**")
+        st.write("[**Lien du Notebook**](https://github.com/MaximeTut/Analyse_accident/blob/main/accident_ru.ipynb)")
+
+
+    with col2.expander("Text Generating", expanded = True ):
+        st.image("robot.png", width=150)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Discussion avec un robot</p>'
+        st.markdown(style, unsafe_allow_html=True)
+        st.write("Déploiement de l'algorithme GPT-2 sous la forme de question/réponse")
+        st.markdown("**#NLP #GTP-2**")
+        st.write("[**Lien de la webapp**](https://share.streamlit.io/maximetut/robot/main/app.py)")
+
+    with col3.expander("Machine Learning", expanded = True ):
+        st.image("pari.png", width=180)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Beat the Bookmakers</p>'
+        st.markdown(style, unsafe_allow_html=True)
+        st.write("Etablir une stratégie de pari sur des matchs de tennis pour générer un maximum de ROI. ROI : 14%")
+        st.markdown("**#XGBoost #Scikit-Learn**")
+        st.write("[**Lien de la webapp**](https://github.com/MaximeTut/Beat_the_bookmakers)")
+
+    col1, col2, col3 = st.columns(3)
+    with col1.expander("Computer vision", expanded= True):
+        st.image("computervision.png", width= 100)
+        style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Détection de maladie</p>'
+        st.markdown(style, unsafe_allow_html=True)
+        st.write("Utilisation des réseaux de convolution pour diagnostiquer des maladies sur des \
+            radiographies de la poitrine.")
+        st.markdown("**#Tensorflow #Keras**")
+        st.write("[**Lien du Notebook**](https://www.kaggle.com/code/maximetut/cnn-x-ray-images/notebook)")

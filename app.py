@@ -14,7 +14,7 @@ st.set_page_config(page_icon = photo, page_title ="Maxime Le Tutour", layout = "
 
 
 def main():
-    st.header("Data scientist | Machine Learning Engineer")
+    st.header("Data Scientist | Machine Learning Engineer")
     choice = option_menu(
             menu_title = None,
             options = ["Présentation", "Compétence", "Portfolio"],
