@@ -57,6 +57,16 @@ vos données !")
 
 
 def Competences():
+    st.markdown(
+        """
+    <style>
+    .streamlit-expanderHeader {
+        font-size: 19px;
+    }
+    </style>
+    """,
+        unsafe_allow_html=True,
+    )
 
     with st.expander("🧑‍💻 Data Science") :
 
@@ -96,13 +106,13 @@ def Competences():
                             'PowerBI', 'Tableau','Pyspark', 'API', 'API',
                             'Contener', 'Versioning', "Cloud", "Tests Unitaires", "Dataiku", "SQL"]
 
-                df["Compétence"] = competences
+                df["Compétences"] = competences
                 df["Librairies"] = librairies
                 df["Détails"] = ["Pandas", "Numpy", "Réseau de convolution", "Natural Language Processing", "Time Series", "Apprentissage Supervié",
                                 "Clustering", "Apprentissage semi-supervisé", "Matplotlib/Seaborn", "Plotly", None, None, None, "Flask", "FastAPI", "Docker",
                                 "Git/Github", "Azure", "Pytest", None, None]
 
-                fig = px.sunburst(df, path=['Compétence', 'Librairies', 'Détails'], title = "Compétences détaillées")
+                fig = px.sunburst(df, path=['Compétences', 'Librairies', 'Détails'], title = "Compétences détaillées")
                 fig.update_layout(width = 500)
 
                 st.plotly_chart(fig)
@@ -242,7 +252,7 @@ def Competences():
         st.markdown("**Azure :** AZ-900: Microsoft Azure Fundamentals | DP-100: Designing and Implementing a Data Science Solution on Azure\
          | AI-900: Microsoft Azure AI Fundamentals")
     
-    with st.expander("Centres d'intérêts"):
+    with st.expander("🎾 Centres d'intérêts"):
         col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([2,3,1,4,1,4,1,3])
         col1.image("compostelle.png", width = 100)
         col2.markdown("**Randonnée :** \n Randonnée de\
@@ -269,9 +279,9 @@ def portfolio():
     .streamlit-expanderHeader {
         font-size: 20px;
         font-weight : bold;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 246);
     }
-    .streamlit-expander {background-color: rgb(255, 255, 255)}
+    .streamlit-expander {background-color: rgb(255, 255, 246)}
     </style>
     """,
         unsafe_allow_html=True,
@@ -316,7 +326,7 @@ def portfolio():
         st.write("[**Lien du Notebook**](https://github.com/MaximeTut/Analyse_accident/blob/main/accident_ru.ipynb)")
 
 
-    with col2.expander("Text Generating", expanded = True ):
+    with col2.expander("Génération de texte", expanded = True ):
         st.image("robot.png", width=150)
         style  = '<p style="font-family:sans-serif; font-weight : bold; color:Green; font-size: 15px;">Discussion avec un robot</p>'
         st.markdown(style, unsafe_allow_html=True)
@@ -330,7 +340,7 @@ def portfolio():
         st.markdown(style, unsafe_allow_html=True)
         st.write("Etablir une stratégie de pari sur des matchs de tennis pour générer un maximum de ROI. ROI : 14%")
         st.markdown("**#XGBoost #Scikit-Learn**")
-        st.write("[**Lien de la webapp**](https://github.com/MaximeTut/Beat_the_bookmakers)")
+        st.write("[**Lien du Github**](https://github.com/MaximeTut/Beat_the_bookmakers)")
 
     col1, col2, col3 = st.columns(3)
     with col1.expander("Computer vision", expanded= True):

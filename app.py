@@ -8,13 +8,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pages import *
 
-photo = "Photo_profil2.jpg"
+photo = "photo_profil.png"
+photo2 = "Photo_profil2.jpg"
 
-st.set_page_config(page_icon = photo, page_title ="Maxime Le Tutour", layout = "wide",)
+st.set_page_config(page_icon = photo2, page_title ="Maxime Le Tutour", layout = "wide",)
 
 
 def main():
-    st.header("Data Scientist | Machine Learning Engineer")
+    st.header("Data Scientist | Data Analyst")
     choice = option_menu(
             menu_title = None,
             options = ["Présentation", "Compétence", "Portfolio"],
@@ -32,7 +33,7 @@ def main():
 
         with st.container():
             col1, col2, col3 = st.columns([1,6,1])
-            col2.image(photo, width = 200)
+            col2.image(photo2, width = 180)
             col2.title("Maxime Le Tutour")
             
 
